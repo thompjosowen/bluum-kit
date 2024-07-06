@@ -1,0 +1,798 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1800px;
+  margin-inline: auto;
+  margin-top: 16vh;
+}
+
+:root {
+  --nav-color: rgba(236, 236, 236, 0.8);
+  --nav-blur: blur(6px);
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 30px;
+  margin: 0.5em 0;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+a {
+  color: gray;
+}
+
+p.title {
+  font-weight: bold;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+}
+
+/* navigation styles begin here */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  width: 100%;
+  padding: 1em 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: var(--nav-color);
+  backdrop-filter: var(--nav-blur);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 3em;
+}
+
+nav ul li a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+  visibility: hidden;
+}
+
+nav ul li a:hover {
+  color: black; /* Change text color to black on hover */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  visibility: visible;
+}
+
+.logo {
+  height: 40px;
+}
+
+.button-group {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+
+.button-white,
+.button-black {
+  display: block;
+  height: 35px;
+  width: 100px;
+  background-color: red;
+  place-content: center;
+  border-radius: 5px;
+}
+
+.button-white {
+  background: white;
+  border: 1px solid gray;
+  color: gray;
+}
+
+.button-black {
+  background: black;
+  border: 1px solid black;
+  color: white;
+}
+
+/* newsletter subscribe styles start here */
+
+.get-exclusive-offers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8vh;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+}
+
+input[type="text"] {
+  padding-left: 10px;
+}
+
+/* columns styles start here */
+
+section.columns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5em 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 100px 0 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* footer style begins here */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/* index.html style begins here */
+
+section.transform-your-urban {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8vh 0;
+}
+
+section.discover-the-benefits-of {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3vh 0 8vh;
+}
+
+section.grow-start-your-urban {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.grow-start-your-urban-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8vh 0 1vh;
+}
+
+img.cube {
+  height: 40px;
+  margin-bottom: 1em;
+}
+
+section.grow-your-own-urban-garden {
+  margin-top: 8vh;
+  background-image: url(./img/placeholder-image.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: lightgray;
+  padding: 200px 50px;
+}
+
+.white {
+  color: white;
+}
+
+/* about.html styles begin here */
+
+section.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8vh;
+}
+
+section.from-a-small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.making-urban-gardening {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.support-urban-agriculture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+/* community styling begins here */
+
+section.hero.connect {
+  display: flex;
+  flex-direction: column;
+}
+
+section.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+section.gallery-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-categories {
+  display: flex;
+  gap: 1em;
+}
+
+p.gallery-category {
+  background-color: rgb(233, 233, 233);
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.gallery-button {
+  display: flex;
+  justify-content: center;
+  margin: 4vh 0 8vh;
+}
+
+section.share-your-gardening {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.blog-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 4vh 0 8vh;
+}
+
+.blog-item {
+  border: 2px solid black;
+  max-width: 500px;
+}
+
+.blog-item-content {
+  padding: 1vh;
+}
+
+.blog-categories {
+  display: flex;
+  gap: 1vh;
+}
+
+p.category {
+  background-color: rgb(233, 233, 233);
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+h3.one-hashtag-at-a-time {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  display: inline;
+  max-height: 80px;
+  height: 100%;
+  margin: 0 40px;
+}
+
+/* download.html styles begin here */
+
+section.hero.accessible {
+  display: flex;
+  flex-direction: column;
+}
+
+section.download-instructions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.eco-friendly-filament {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.discover-a-wide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+/* educational resources styles begin here */
+
+section.hero.educational {
+  align-items: flex-start;
+}
+
+section.starting-an-urban {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 12vh 0 12vh;
+}
+
+section.starting-an-urban-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vh;
+}
+
+.starting-an-urban-items-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+  margin-bottom: 16vh;
+}
+
+section.get-started-with {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+section.discover-sustainable-practices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.discover-main-text-features {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.unlocking-the-potential {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16vh 0;
+}
+
+section.unlock-the-secrets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+section.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+.explore-a-world-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  margin: 8vh 0;
+  padding: 4vh;
+}
+
+/* how it works styling begins here*/
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vh;
+  gap: 8vh;
+}
+
+section.discover-the-easy {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 12vh 0 3vh;
+}
+
+section.discover-the-easy-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+.discover-the-easy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section.blum-kit-has-revolutionized {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.expert-guides-to-troubleshoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12vh 0;
+}
+
+/* news and updates styles begins here */
+
+section.hero.latest-updates {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.new-discoveries-in {
+  margin-bottom: 2vh;
+}
+
+.discoveries-figure-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 8vh;
+}
+
+span.description {
+  display: flex;
+  gap: 0.5em;
+}
+
+section.exciting-new-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.stay-updated-with {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+section.stay-updated-with-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+
+.stay-updated-with-card {
+  border: 1px solid black;
+  max-width: 600px;
+}
+
+.stay-updated-card-description {
+  padding: 2vh;
+}
+
+.blog-stay-updated-card {
+  border: 1px solid black;
+}
+
+.blog-stay-updated-buttons {
+  margin-top: 3vh;
+}
+
+/* plant selection guide styles begin here */
+
+section.hero.discover {
+  margin-bottom: 16vh;
+}
+
+section.find-the-perfect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+section.choosing-the-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16vh 0vh;
+}
+
+.the-plant-selection-guide {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 8vh 0;
+}
+
+section.maximize-plant-growth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8vh 0;
+}
+
+.optimize-main-text-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* products  styles begins here */
+
+section.hero.sustainable {
+  margin-bottom: 16vh;
+}
+
+section.discover-our-wide-range {
+  margin-bottom: 2vh;
+}
+
+section.our-range-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+section.innovative-explore-our-3D {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+section.discover-our-amazing-planter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+section.discover-our-amazing {
+  margin-bottom: 16vh;
+}
+
+.discover-our-amazing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  margin: 8vh 0;
+}
+
+.discover-our-main-text {
+  padding-left: 4vh;
+}
+
+img.discover-our-main-image {
+  max-height: 600px;
+  min-height: 0;
+}
+
+/* products-page styles start here */
+
+section.hero.discover-our-products {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 16vh;
+}
+
+section.discover-our-wide-range {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+section.discover-our-versatile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16vh;
+}
+
+section.product-page-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+video {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+}
+
+section.discover-our-amazing-planter-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8vh;
+}
+
+section.questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12vh 0;
+}
+
+.faq {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.accordion {
+  width: 600px;
+  margin: 120px 0;
+  list-style: none;
+}
+
+.accordion li {
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.accordion li label {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.accordion li label::after {
+  content: "+";
+  font-size: 23px;
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.checkbox:checked ~ .answer {
+  height: 110px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ label::after {
+  content: "-";
+}
